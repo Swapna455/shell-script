@@ -30,6 +30,7 @@ USAGE(){
 
     
 }
+mkdir -p /home/ec2-user/shellscript-logs/
 
 if [$# -lt 2]
 then
