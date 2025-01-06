@@ -11,7 +11,7 @@ output_file=$2
 
 # Check if the input file exists
 if [ ! -f "$input_file" ]; then
-    echo "Error: File '$input_file' not found!"
+    echo "Error: File \"$input_file\" not found!"
     exit 1
 fi
 
