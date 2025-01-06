@@ -17,12 +17,13 @@ VALIDATE(){
 }
 
 echo "script started exceuting at time: "$TIMESTAMP" &>>$LOG_FILE_NAME
+
 if [$USERID -ne 0]
 then 
 echo "ERROR : You must have sudo access to execute this script"
 exit 1 #other than 0
 fi
-dnd  list installed mysql &>>$LOF_FILE_NAME
+dnd  list installed mysql
 
 if [$? -ne 0]
 then # not installed
