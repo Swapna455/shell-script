@@ -16,11 +16,11 @@ if [ ! -f "$input_file" ]; then
 fi
 
 # Reverse each line and save it to the output file
-while IFS= read -r line; 
+while read -r line; 
 do
     echo "$line" | rev
 done < "$input_file" > "$output_file"
 
-echo -e "First line\nsecond line\nthirdline" > $input_file
+
 
 echo "Reversed content has been saved to '$output_file'."
