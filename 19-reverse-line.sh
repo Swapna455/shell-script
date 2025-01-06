@@ -21,4 +21,6 @@ do
     echo "$line" | rev
 done < "$input_file" > "$output_file"
 
+echo -e "First line\nsecond line\nthirdline" > $input_file
+
 echo "Reversed content has been saved to '$output_file'."
