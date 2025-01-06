@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$(id -u)
+
 R="\e[31m"
 G="\E[32m"
 Y="\e[33m"
@@ -31,6 +31,7 @@ USAGE(){
 
     
 }
+
 mkdir -p /home/ec2-user/shellscript-logs/
 
 if [ $# -lt 2 ]
