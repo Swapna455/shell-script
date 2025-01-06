@@ -16,7 +16,8 @@ if [ ! -f "$input_file" ]; then
 fi
 
 # Reverse each line and save it to the output file
-while IFS= read -r line; do
+while IFS= read -r line; 
+do
     echo "$line" | rev
 done < "$input_file" > "$output_file"
 
