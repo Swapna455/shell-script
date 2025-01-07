@@ -8,7 +8,7 @@ N="\e[0m"
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${3;-14}  # if user is not providing number of days,we are taking 14 as default
+DAYS=${ 3;-14 }  # if user is not providing number of days,we are taking 14 as default
 
 LOGS_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
@@ -34,13 +34,13 @@ then
     USAGE
 fi
  
-if [ ! -d $SOURCE_DIR ]
+if [ ! -d "$SOURCE_DIR "]
 then
     echo -e "$SOURCE_DIR does not exist .... please check"
     exit 1
 fi
 
-if [ ! -d $DEST_DIR ]
+if [ ! -d "$DEST_DIR"  ]
 then
     echo -e "$DEST_DIR does not exist ... please check"
     exit 1
@@ -60,14 +60,14 @@ then
 then
     echo -e "successfullr created zip file for older $DAYs"
     while read -r filepath
-do
-   echo  "deleting file :  $filepath" &>>$LOG_FILE_NAME
-   rm -rf $filepath
-   echo "Deleted file : $filepath"
+    do
+         echo  "deleting file :  $filepath" &>>$LOG_FILE_NAME
+         rm -rf $filepath
+         echo "Deleted file : $filepath"
 
 
 
-done <<< $FILES
+    done <<< $FILES
 
 else
      echo -e "$R Error :: $N Failed to create ZIP file "
