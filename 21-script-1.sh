@@ -2,7 +2,7 @@
 
 MSG="SCRIPT1"
 GREET="Hi from SCRIPT-1"
-SOURCE  ./22-script-2.sh
+source ./22-script-2.sh
 
 
 
