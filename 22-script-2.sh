@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MSG="SCRIPT2"
+A="30"
 
 
 
