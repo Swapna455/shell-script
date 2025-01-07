@@ -13,6 +13,6 @@ do
    then
        MSG="High Disk usage on partition: $PARTITION Usage is : $USAGE"
 
-done <<<$DISK_USAGE
+done <<<  $DISK_USAGE
 
 echo  "message: $MSG "
